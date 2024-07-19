@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:layoutDef xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram"
+	xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" uniqueId="urn:microsoft.com/office/officeart/2018/5/layout/CenteredIconLabelDescriptionList">
+	<dgm:title val="Centered Icon Label Description List"/>
+	<dgm:desc val="Use to show non-sequential or grouped chunks of information. The placeholder holds an icon or small picture, and corresponding text boxes show Level 1 and Level 2 text respectively. Works well for minimal Level 1 text accompanied by lengthier Level two text."/>
+	<dgm:catLst>
+		<dgm:cat type="icon" pri="500"/>
+	</dgm:catLst>
+	<dgm:sampData useDef="1">
+		<dgm:dataModel>
+			<dgm:ptLst/>
+			<dgm:bg/>
+			<dgm:whole/>
+		</dgm:dataModel>
+	</dgm:sampData>
+	<dgm:styleData useDef="1">
+		<dgm:dataModel>
+			<dgm:ptLst/>
+			<dgm:bg/>
+			<dgm:whole/>
+		</dgm:dataModel>
+	</dgm:styleData>
+	<dgm:clrData useDef="1">
+		<dgm:dataModel>
+			<dgm:ptLst/>
+			<dgm:bg/>
+			<dgm:whole/>
+		</dgm:dataModel>
+	</dgm:clrData>
+	<dgm:layoutNode name="root">
+		<dgm:varLst>
+			<dgm:dir/>
+			<dgm:resizeHandles val="exact"/>
+		</dgm:varLst>
+		<dgm:choose name="Name0">
+			<dgm:if name="Name1" axis="self" func="var" arg="dir" op="equ" val="norm">
+				<dgm:alg type="lin"/>
+			</dgm:if>
+			<dgm:else name="Name2">
+				<dgm:alg type="lin">
+					<dgm:param type="linDir" val="fromR"/>
+				</dgm:alg>
+			</dgm:else>
+		</dgm:choose>
+		<dgm:shape xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+			<dgm:adjLst/>
+		</dgm:shape>
+		<dgm:presOf/>
+		<dgm:constrLst>
+			<dgm:constr type="h" for="ch" forName="compNode" refType="h" fact="0.45"/>
+			<dgm:constr type="w" for="ch" forName="compNode" val="120"/>
+			<dgm:constr type="w" for="ch" forName="sibTrans" refType="w" refFor="ch" refForName="compNode" fact="0.175"/>
+			<dgm:constr type="primFontSz" for="des" forName="parTx" val="36"/>
+			<dgm:constr type="primFontSz" for="des" forName="desTx" refType="primFontSz" refFor="des" refForName="parTx" op="lte" fact="0.75"/>
+			<dgm:constr type="h" for="des" forName="compNode" op="equ"/>
+			<dgm:constr type="h" for="des" forName="iconRect" op="equ"/>
+			<dgm:constr type="w" for="des" forName="iconRect" op="equ"/>
+			<dgm:constr type="h" for="des" forName="iconSpace" op="equ"/>
+			<dgm:constr type="h" for="des" forName="parTx" op="equ"/>
+			<dgm:constr type="h" for="des" forName="txSpace" op="equ"/>
+			<dgm:constr type="h" for="des" forName="desTx" op="equ"/>
+		</dgm:constrLst>
+		<dgm:ruleLst>
+			<dgm:rule type="w" for="ch" forName="compNode" val="0" fact="NaN" max="NaN"/>
+		</dgm:ruleLst>
+		<dgm:forEach name="Name3" axis="ch" ptType="node">
+			<dgm:layoutNode name="compNode">
+				<dgm:alg type="composite"/>
+				<dgm:shape xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+					<dgm:adjLst/>
+				</dgm:shape>
+				<dgm:presOf axis="self"/>
+				<dgm:constrLst>
+					<dgm:constr type="w" for="ch" forName="iconRect" refType="w" fact="0.35"/>
+					<dgm:constr type="h" for="ch" forName="iconRect" refType="w" refFor="ch" refForName="iconRect"/>
+					<dgm:constr type="ctrX" for="ch" forName="iconRect" refType="w" fact="0.5"/>
+					<dgm:constr type="t" for="ch" forName="iconRect"/>
+					<dgm:constr type="w" for="ch" forName="iconSpace" refType="w"/>
+					<dgm:constr type="h" for="ch" forName="iconSpace" refType="h" fact="0.043"/>
+					<dgm:constr type="l" for="ch" forName="iconSpace"/>
+					<dgm:constr type="t" for="ch" forName="iconSpace" refType="b" refFor="ch" refForName="iconRect"/>
+					<dgm:constr type="w" for="ch" forName="parTx" refType="w"/>
+					<dgm:constr type="h" for="ch" forName="parTx" refType="w" fact="0.15"/>
+					<dgm:constr type="l" for="ch" forName="parTx"/>
+					<dgm:constr type="t" for="ch" forName="parTx" refType="b" refFor="ch" refForName="iconSpace"/>
+					<dgm:constr type="h" for="ch" forName="txSpace" refType="h" fact="0.02"/>
+					<dgm:constr type="w" for="ch" forName="txSpace" refType="w"/>
+					<dgm:constr type="l" for="ch" forName="txSpace"/>
+					<dgm:constr type="t" for="ch" forName="txSpace" refType="b" refFor="ch" refForName="parTx"/>
+					<dgm:constr type="w" for="ch" forName="desTx" refType="w"/>
+					<dgm:constr type="l" for="ch" forName="desTx"/>
+					<dgm:constr type="t" for="ch" forName="desTx" refType="b" refFor="ch" refForName="txSpace"/>
+				</dgm:constrLst>
+				<dgm:ruleLst>
+					<dgm:rule type="h" val="INF" fact="NaN" max="NaN"/>
+				</dgm:ruleLst>
+				<dgm:layoutNode name="iconRect" styleLbl="node1">
+					<dgm:alg type="sp"/>
+					<dgm:shape type="rect"
+						xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="" blipPhldr="1">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf/>
+					<dgm:constrLst/>
+					<dgm:ruleLst/>
+				</dgm:layoutNode>
+				<dgm:layoutNode name="iconSpace">
+					<dgm:alg type="sp"/>
+					<dgm:shape xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf/>
+					<dgm:constrLst/>
+					<dgm:ruleLst/>
+				</dgm:layoutNode>
+				<dgm:layoutNode name="parTx" styleLbl="revTx">
+					<dgm:varLst>
+						<dgm:chMax val="0"/>
+						<dgm:chPref val="0"/>
+					</dgm:varLst>
+					<dgm:alg type="tx">
+						<dgm:param type="txAnchorVert" val="t"/>
+					</dgm:alg>
+					<dgm:shape type="rect"
+						xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf axis="self" ptType="node"/>
+					<dgm:constrLst>
+						<dgm:constr type="lMarg"/>
+						<dgm:constr type="rMarg"/>
+						<dgm:constr type="tMarg"/>
+						<dgm:constr type="bMarg"/>
+					</dgm:constrLst>
+					<dgm:ruleLst>
+						<dgm:rule type="primFontSz" val="14" fact="NaN" max="NaN"/>
+						<dgm:rule type="h" val="INF" fact="NaN" max="NaN"/>
+					</dgm:ruleLst>
+				</dgm:layoutNode>
+				<dgm:layoutNode name="txSpace">
+					<dgm:alg type="sp"/>
+					<dgm:shape xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf/>
+					<dgm:constrLst/>
+					<dgm:ruleLst/>
+				</dgm:layoutNode>
+				<dgm:layoutNode name="desTx" styleLbl="revTx">
+					<dgm:varLst/>
+					<dgm:alg type="tx">
+						<dgm:param type="stBulletLvl" val="0"/>
+						<dgm:param type="txAnchorVert" val="t"/>
+					</dgm:alg>
+					<dgm:shape type="rect"
+						xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf axis="des" ptType="node"/>
+					<dgm:constrLst>
+						<dgm:constr type="secFontSz" refType="primFontSz"/>
+						<dgm:constr type="lMarg"/>
+						<dgm:constr type="rMarg"/>
+						<dgm:constr type="tMarg"/>
+						<dgm:constr type="bMarg"/>
+					</dgm:constrLst>
+					<dgm:ruleLst>
+						<dgm:rule type="primFontSz" val="NaN" fact="NaN" max="17"/>
+						<dgm:rule type="h" val="INF" fact="NaN" max="NaN"/>
+					</dgm:ruleLst>
+				</dgm:layoutNode>
+			</dgm:layoutNode>
+			<dgm:forEach name="Name4" axis="followSib" ptType="sibTrans" cnt="1">
+				<dgm:layoutNode name="sibTrans">
+					<dgm:alg type="sp"/>
+					<dgm:shape xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:blip="">
+						<dgm:adjLst/>
+					</dgm:shape>
+					<dgm:presOf axis="self"/>
+					<dgm:constrLst/>
+					<dgm:ruleLst/>
+				</dgm:layoutNode>
+			</dgm:forEach>
+		</dgm:forEach>
+	</dgm:layoutNode>
+	<dgm:extLst>
+		<a:ext uri="{68A01E43-0DF5-4B5B-8FA6-DAF915123BFB}">
+			<dgm1612:lstStyle xmlns:dgm1612="http://schemas.microsoft.com/office/drawing/2016/12/diagram">
+				<a:lvl1pPr>
+					<a:lnSpc>
+						<a:spcPct val="100000"/>
+					</a:lnSpc>
+					<a:defRPr b="1"/>
+				</a:lvl1pPr>
+				<a:lvl2pPr>
+					<a:lnSpc>
+						<a:spcPct val="100000"/>
+					</a:lnSpc>
+				</a:lvl2pPr>
+			</dgm1612:lstStyle>
+		</a:ext>
+	</dgm:extLst>
+</dgm:layoutDef>
