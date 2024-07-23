@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
+	xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+	xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+	<p:cSld>
+		<p:spTree>
+			<p:nvGrpSpPr>
+				<p:cNvPr id="1" name=""/>
+				<p:cNvGrpSpPr/>
+				<p:nvPr/>
+			</p:nvGrpSpPr>
+			<p:grpSpPr>
+				<a:xfrm>
+					<a:off x="0" y="0"/>
+					<a:ext cx="0" cy="0"/>
+					<a:chOff x="0" y="0"/>
+					<a:chExt cx="0" cy="0"/>
+				</a:xfrm>
+			</p:grpSpPr>
+			<p:sp>
+				<p:nvSpPr>
+					<p:cNvPr id="4" name="标题 3">
+						<a:extLst>
+							<a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+								<a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{51CDB912-5B18-4CAD-0C6A-C1E70A8D3F33}"/>
+							</a:ext>
+						</a:extLst>
+					</p:cNvPr>
+					<p:cNvSpPr>
+						<a:spLocks noGrp="1"/>
+					</p:cNvSpPr>
+					<p:nvPr>
+						<p:ph type="title"/>
+					</p:nvPr>
+				</p:nvSpPr>
+				<p:spPr/>
+				<p:txBody>
+					<a:bodyPr/>
+					<a:lstStyle/>
+					<a:p>
+						<a:endParaRPr lang="zh-CN" altLang="en-US"/>
+					</a:p>
+				</p:txBody>
+			</p:sp>
+			<p:graphicFrame>
+				<p:nvGraphicFramePr>
+					<p:cNvPr id="2" name="内容占位符 1">
+						<a:extLst>
+							<a:ext uri="{FF2B5EF4-FFF2-40B4-BE49-F238E27FC236}">
+								<a16:creationId xmlns:a16="http://schemas.microsoft.com/office/drawing/2014/main" id="{FF191545-3953-546A-A663-29A2A37F7AC3}"/>
+							</a:ext>
+						</a:extLst>
+					</p:cNvPr>
+					<p:cNvGraphicFramePr>
+						<a:graphicFrameLocks noGrp="1"/>
+					</p:cNvGraphicFramePr>
+					<p:nvPr>
+						<p:ph idx="1"/>
+						<p:extLst>
+							<p:ext uri="{D42A27DB-BD31-4B8C-83A1-F6EECF244321}">
+								<p14:modId xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="3262497604"/>
+							</p:ext>
+						</p:extLst>
+					</p:nvPr>
+				</p:nvGraphicFramePr>
+				<p:xfrm>
+					<a:off x="838200" y="1825625"/>
+					<a:ext cx="10515600" cy="4351338"/>
+				</p:xfrm>
+				<a:graphic>
+					<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/diagram">
+						<dgm:relIds xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram"
+							xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" r:dm="rId2" r:lo="rId3" r:qs="rId4" r:cs="rId5"/>
+					</a:graphicData>
+				</a:graphic>
+			</p:graphicFrame>
+		</p:spTree>
+		<p:extLst>
+			<p:ext uri="{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}">
+				<p14:creationId xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="514050341"/>
+			</p:ext>
+		</p:extLst>
+	</p:cSld>
+	<p:clrMapOvr>
+		<a:masterClrMapping/>
+	</p:clrMapOvr>
+</p:sld>
