@@ -1,6 +1,9 @@
 name: Package Templates
 on:
-  - workflow_dispatch
+  workflow_dispatch:
+  push:
+    paths:
+      - 'diagrams/**'
 
 jobs:
   package:
