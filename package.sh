@@ -40,9 +40,11 @@ done
 
 cur_dir=$(pwd)
 cd "$release_glox_prefix" || exit 1
-zip -r "_all-glox.zip" .
-mv "_all-glox.zip" ../
+glox_name=01-glox-all.zip
+zip -r "$glox_name" .
+mv "$glox_name" ../
 
 cd "$cur_dir/$release_pptx_prefix" || exit 1
-zip -r "_all-pptx.zip" .
-mv "_all-pptx.zip" ../
+pptx_name=02-pptx-all.zip
+zip -r "$pptx_name" .
+mv "$pptx_name" ../
