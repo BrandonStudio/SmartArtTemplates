@@ -26,10 +26,14 @@ jobs:
           LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
           CHANGED_FILES=$(git diff --name-only $LATEST_TAG HEAD -- diagrams)
           if [ -z "$CHANGED_FILES" ]; then
-            echo "::set-output name=list::No diagram changed"
+            echo "list=No diagram changed" >> $GITHUB_ENV
           else
             CHANGED_LIST=$(echo "$CHANGED_FILES" | xargs -n 1 basename | awk '{print "- " $0}')
-            echo "::set-output name=list::$CHANGED_LIST"
+            {
+              echo 'list<<EOF'
+              echo "$CHANGED_LIST"
+              echo 'EOF'
+            } >> $GITHUB_ENV
           fi
 
       - name: Create Release
