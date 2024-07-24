@@ -15,6 +15,20 @@ jobs:
       - name: Package
         run: sh package.sh
 
+      - name: Get Change
+        id: get_change
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          CHANGED_FILES=$(git diff --name-only $LATEST_TAG HEAD -- diagrams)
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "::set-output name=list::No diagram changed"
+          else
+            CHANGED_LIST=$(echo "$CHANGED_FILES" | xargs -n 1 basename | awk '{print "- " $0}')
+            echo "::set-output name=list::$CHANGED_LIST"
+          fi
+
       - name: Create Release
         id: create_release
         uses: avakar/tag-and-release@v1
@@ -24,7 +38,9 @@ jobs:
           tag_name: v${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
           body: |
-            Release #${{ github.run_number }}
+            # Release v${{ github.run_number }}
+            **Changes since last release:**
+            ${{ steps.get_change.outputs.list }}
           draft: false
           prerelease: false
 
