@@ -2,7 +2,7 @@
 	"xml.fileAssociations": [
 		{
 			"pattern": "diagrams/*.xml",
-			"systemId": "https://cdn.jsdelivr.net/gh/python-openxml/python-docx@master/ref/xsd/dml-diagram.xsd"
-		}
-	]
+			"systemId": "https://cdn.jsdelivr.net/gh/python-openxml/python-docx@master/ref/xsd/dml-diagram.xsd",
+		},
+	],
 }

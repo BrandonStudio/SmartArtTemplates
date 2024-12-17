@@ -26,19 +26,21 @@ jobs:
           LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
           CHANGED_FILES=$(git diff --name-only $LATEST_TAG HEAD -- diagrams)
           if [ -z "$CHANGED_FILES" ]; then
-            echo "list=No diagram changed" >> $GITHUB_ENV
+            echo "list=No diagram changed" >> $GITHUB_OUTPUT
+            echo "No diagram changed"
           else
-            CHANGED_LIST=$(echo "$CHANGED_FILES" | xargs -n 1 basename | awk '{print "- " $0}')
+            CHANGED_LIST=$(echo "$CHANGED_FILES" | xargs -n 1 basename | awk '{print "- [`" $0 "`](diagrams/" $0 ")"}' | sort)
             {
               echo 'list<<EOF'
               echo "$CHANGED_LIST"
               echo 'EOF'
-            } >> $GITHUB_ENV
+            } >> $GITHUB_OUTPUT
+            echo "$CHANGED_LIST"
           fi
 
       - name: Create Release
         id: create_release
-        uses: avakar/tag-and-release@v1
+        uses: BrandonStudio/tag-and-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
